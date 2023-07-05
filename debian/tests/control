@@ -1,0 +1,29 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test nom 7.1.1 --all-targets --all-features
+Features: test-name=rust-nom:@
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, librust-proptest-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test nom 7.1.1 --all-targets --no-default-features --features alloc
+Features: test-name=librust-nom-dev:alloc
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, librust-proptest-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test nom 7.1.1 --all-targets --no-default-features --features docsrs
+Features: test-name=librust-nom-dev:docsrs
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, librust-proptest-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test nom 7.1.1 --all-targets --no-default-features
+Features: test-name=librust-nom-dev:
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, librust-proptest-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test nom 7.1.1 --all-targets 
+Features: test-name=librust-nom+std-dev:default
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, librust-proptest-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test nom 7.1.1 --all-targets --no-default-features --features std
+Features: test-name=librust-nom+std-dev:std
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev, librust-proptest-1+default-dev, @
+Restrictions: allow-stderr, skip-not-installable
